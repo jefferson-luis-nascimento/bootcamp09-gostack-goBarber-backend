@@ -1,1 +1,1 @@
-# bootcamp09-gostack-goBarber-beckend
+# bootcamp09-gostack-goBarber-backend
