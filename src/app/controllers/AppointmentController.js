@@ -59,6 +59,16 @@ class AppointmentControler {
     }
 
     /**
+     * check if user is the same as provider
+     */
+
+    if (req.userId === provider_id) {
+      return res
+        .status(401)
+        .json({ error: 'User and provider con not be the same' });
+    }
+
+    /**
      * check for past dates
      */
 
@@ -107,7 +117,7 @@ class AppointmentControler {
       user: provider_id,
     });
 
-    return res.json(appointment);
+    return res.status(201).json(appointment);
   }
 }
 
